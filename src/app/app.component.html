@@ -1,0 +1,26 @@
+<!-- <p>Template driven forms</p>
+<form #LoginForm="ngForm">
+<label>
+  username
+</label>
+<input type="text" [(ngModel)]="data.name" name="name" #username="ngModel" required>
+<input type="button" title="submit" [disabled]="!LoginForm.valid" value="submit">
+</form>
+{{LoginForm.valid}}
+Sample data {{username.value}} -->
+<form [formGroup]="loginForm">
+  <label>
+    username
+  </label>
+  <input type="text" formControlName="name">
+  <input type="button" title="submit" [disabled]="!loginForm.valid" value="submit">
+  </form>
+  {{loginForm.controls.name.valid}}
+  <router-outlet></router-outlet>
+  <!-- {{sampleData1|async|json}} -->
+  <div *ngFor="let a of checkData">
+    <input type="checkbox" [checked]="a.available" [(ngModel)]="a.available" (change)="checked($event,a)">{{a.name}}
+  </div>
+  <app-login [checkParentData]="checkedData" (sendEventBack)="gotEventFromChild($event)"></app-login>
+
+  

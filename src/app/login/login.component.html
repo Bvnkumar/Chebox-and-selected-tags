@@ -1,0 +1,6 @@
+<p>
+  login works!
+</p>
+<div *ngFor="let a of checkParentData">
+<span>{{a.name}}&nbsp;</span><span class="cursor" (click)="sendEvent(a.name)">X</span>
+</div>
