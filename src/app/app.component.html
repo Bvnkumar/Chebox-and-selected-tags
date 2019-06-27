@@ -18,6 +18,10 @@ Sample data {{username.value}} -->
   {{loginForm.controls.name.valid}}
   <router-outlet></router-outlet>
   <!-- {{sampleData1|async|json}} -->
+  <div [ngStyle]="{'padding': '15px 0px 15px 0px'}">
+    Check anyone to get the seleceted tags
+  </div>
+
   <div *ngFor="let a of checkData">
     <input type="checkbox" [checked]="a.available" [(ngModel)]="a.available" (change)="checked($event,a)">{{a.name}}
   </div>

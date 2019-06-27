@@ -32,6 +32,10 @@ export class AppComponent {
   checked(event, a) {
     if (event.target.checked) {
       this.checkedData.push(a);
+    }else {
+      this.checkedData = this.checkedData.filter(function(obj) {
+        return obj.name !== a.name;
+      });
     }
   }
   gotEventFromChild(b) {
