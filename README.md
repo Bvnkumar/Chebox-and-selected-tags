@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logout
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Chebox-and-selected-tags
+This is an example of getting the data from the selected box and rendering it in  child component and if we click on selected tags close button then will automatically  uncheck the chekbox in parent component based on the  tag value which is comes from the  child component
